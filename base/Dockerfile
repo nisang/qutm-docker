@@ -6,5 +6,5 @@ RUNsudo add-apt-repository ppa:bitcoin/bitcoin
 RUNsudo apt-get update
 RUNsudo apt-get install libdb4.8-dev libdb4.8++-dev
 
-RUN cd opt
+WORKDIR /opt
 RUN git clone https://github.com/qtumproject/qtum
