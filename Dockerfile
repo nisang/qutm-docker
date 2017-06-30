@@ -1,10 +1,9 @@
-FROM ubuntu:qtum
+FROM registry.cn-hangzhou.aliyuncs.com/nisang/qutm-docker:latest
 
-cd /opt/qtum
+WORKDIR /opt/qtum
 
-git submodule update --init --recursive 
+RUN git submodule update --init --recursive 
 
-dependencies if needed
-./autogen.sh
-./configure 
-make -j2
+RUN ./autogen.sh
+RUN ./configure 
+RUN make -j2
