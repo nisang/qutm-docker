@@ -4,4 +4,4 @@ RUN apt-get update
 
 RUN apt-get install -y cargo
 
-RUN cargo install ethabi-cli
+RUN cargo install -y ethabi-cli
